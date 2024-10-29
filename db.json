@@ -1,0 +1,22 @@
+{
+  "contatos": [
+    {
+      "id": "1",
+      "nome": "João",
+      "telefone": "123456789",
+      "grupoId": 1
+    },
+    {
+      "id": "2",
+      "nome": "Maria",
+      "telefone": "987654321",
+      "grupoId": 2
+    },
+    {
+      "id": 0,
+      "nome": "gustavo mesquita",
+      "telefone": "44998178854",
+      "grupoId": 1
+    } 
+  ]
+}
