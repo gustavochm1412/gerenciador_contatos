@@ -11,10 +11,10 @@ class _FormularioContatoState extends State<FormularioContato> {
   final _formKey = GlobalKey<FormState>();
   String? nome;
   String? telefone;
-  int? grupoSelecionado;  // Guardar o ID do grupo selecionado
+  int? grupoSelecionado;  
   ApiService apiService = ApiService();
 
-  final List<Map<String, dynamic>> grupos = [  // Simular os grupos para o dropdown
+  final List<Map<String, dynamic>> grupos = [  
     {'id': 1, 'nome': 'Família'},
     {'id': 2, 'nome': 'Amigos'}
   ];
@@ -75,7 +75,7 @@ class _FormularioContatoState extends State<FormularioContato> {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
                     Contato novoContato = Contato(
-                      id: 0,  // Deixe o backend gerar o ID
+                      id: 0,  
                       nome: nome!,
                       telefone: telefone!,
                       grupoId: grupoSelecionado!,
