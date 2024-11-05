@@ -16,16 +16,16 @@ void main() {
   });
 
   test('Filtrar contatos por grupoId', () async {
-    // Simular uma lista de contatos com o mesmo grupoId
+    
     final contatosMock = [
       Contato(id: 1, nome: 'João', telefone: '123456789', grupoId: 1),
       Contato(id: 2, nome: 'Maria', telefone: '987654321', grupoId: 1),
     ];
 
-    // Configurar o mock para retornar a lista de contatos com tipo correto
+    
     when(mockApiService.fetchContatos()).thenAnswer((_) async => contatosMock);
 
-    // Recuperar contatos e aplicar o filtro por grupoId
+    
     final contatos = await mockApiService.fetchContatos();
     final filtrados = contatos.where((contato) => contato.grupoId == 1).toList();
 
