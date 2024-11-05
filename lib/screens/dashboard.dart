@@ -10,7 +10,7 @@ class Dashboard extends StatelessWidget {
           Text('Total de Contatos: 0'),
           ElevatedButton(
             onPressed: () {
-              // Navegar para a lista de contatos
+              
             },
             child: Text('Ver Contatos'),
           ),
