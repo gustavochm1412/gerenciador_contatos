@@ -5,12 +5,11 @@ import '../models/contato.dart';
 const String apiUrl = "http://localhost:3000/contatos";
 
 class ApiService {
-  // Função para adicionar um contato
   Future<Contato> addContato(Contato contato) async {
     final response = await http.post(
       Uri.parse(apiUrl),
       headers: {"Content-Type": "application/json"},
-      body: json.encode(contato.toJson()),  // Usando o método toJson da classe Contato
+      body: json.encode(contato.toJson()),  
     );
 
     if (response.statusCode == 201) {
@@ -20,7 +19,7 @@ class ApiService {
     }
   }
 
-  // Função para buscar todos os contatos
+ 
   Future<List<Contato>> fetchContatos() async {
     final response = await http.get(Uri.parse(apiUrl));
     if (response.statusCode == 200) {
