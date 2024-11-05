@@ -11,7 +11,7 @@ class Contato {
     required this.grupoId,
   });
 
-  // Método para criar um Contato a partir de um JSON
+
   factory Contato.fromJson(Map<String, dynamic> json) {
     return Contato(
       id: json['id'],
@@ -21,7 +21,7 @@ class Contato {
     );
   }
 
-  // Método para converter um Contato em JSON
+
   Map<String, dynamic> toJson() {
     return {
       'id': id,
